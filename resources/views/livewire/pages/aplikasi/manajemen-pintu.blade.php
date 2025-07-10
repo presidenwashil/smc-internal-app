@@ -1,7 +1,9 @@
 <div wire:init="loadProperties">
     <x-flash />
 
-    <livewire:pages.aplikasi.modal.input-pintu />
+    @can('antrean.manajemen-pintu.create')
+        <livewire:pages.aplikasi.modal.input-pintu />
+    @endcan
 
     @once
         @push('js')
