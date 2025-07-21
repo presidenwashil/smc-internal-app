@@ -10,7 +10,7 @@ return new class extends Migration
     {
         Schema::connection('mysql_smc')->create('manajemen_pintu', function (Blueprint $table): void {
             $table->id();
-            $table->string('kd_pintu');
+            $table->string('kd_pintu')->unique();
             $table->string('nm_pintu');
             $table->timestamps($precision = 6);
         });
