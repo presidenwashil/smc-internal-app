@@ -14,4 +14,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', CreateSPOController::class)->name('create-spo');
+Route::get('/', [CreateSPOController::class, 'index'])->name('create-spo');
